@@ -1,0 +1,11 @@
+.listContainer {
+  margin-top: 20px;
+}
+
+.listContainer li {
+  font-size: 20px;
+}
+
+.listContainer li:not(:last-child) {
+  margin-bottom: 10px;
+}

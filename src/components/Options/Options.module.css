@@ -1,0 +1,15 @@
+.btnContainer button {
+  padding: 5px;
+  background-color: whitesmoke;
+  border: 1px solid lightgray;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.btnContainer button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.btnContainer button:hover {
+  background-color: rgb(260, 260, 260);
+}
