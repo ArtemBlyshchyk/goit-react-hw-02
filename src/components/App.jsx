@@ -29,9 +29,9 @@ const App = () => {
     0
   );
 
-  const positivePercOfFeedback =
-    Math.round(((feedback.good + feedback.neutral) / totalFeedback) * 100) ||
-    totalFeedback;
+  const positivePercOfFeedback = Math.round(
+    ((feedback.good + feedback.neutral) / totalFeedback) * 100
+  );
 
   const handleResetFeedback = () => {
     setFeedback(initialFeedback);
