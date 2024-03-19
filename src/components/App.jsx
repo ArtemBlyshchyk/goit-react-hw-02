@@ -33,6 +33,14 @@ const App = () => {
     ((feedback.good + feedback.neutral) / totalFeedback) * 100
   );
 
+  // Second Variant how to get positiveFeedbacks
+  // const getPositiveFeedback = ({ good, neutral }, totalFeedback) => {
+  //   return (
+  //     good + neutral && Math.round(((good + neutral) / totalFeedback) * 100)
+  //   );
+  // };
+  // const positivePercOfFeedback = getPositiveFeedback(feedback, totalFeedback);
+
   const handleResetFeedback = () => {
     setFeedback(initialFeedback);
   };
@@ -45,14 +53,15 @@ const App = () => {
         totalFeedback={totalFeedback}
         handleResetFeedback={handleResetFeedback}
       />
-
-      <Feedback
-        feedback={feedback}
-        totalFeedback={totalFeedback}
-        positivePercOfFeedback={positivePercOfFeedback}
-      />
-
-      <Notification totalFeedback={totalFeedback} />
+      {totalFeedback ? (
+        <Feedback
+          feedback={feedback}
+          totalFeedback={totalFeedback}
+          positivePercOfFeedback={positivePercOfFeedback}
+        />
+      ) : (
+        <Notification />
+      )}
     </>
   );
 };
